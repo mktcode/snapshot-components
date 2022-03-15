@@ -2,6 +2,15 @@
   "name": "snapshot-components",
   "private": true,
   "version": "0.0.0",
+  "files": ["dist"],
+  "main": "./dist/components.umd.js",
+  "module": "./dist/components.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/components.es.js",
+      "require": "./dist/components.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
