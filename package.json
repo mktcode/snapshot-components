@@ -1,7 +1,6 @@
 {
-  "name": "snapshot-components",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@mktcode/snapshot-components",
+  "version": "0.0.1",
   "files": ["dist"],
   "main": "./dist/components.umd.js",
   "module": "./dist/components.es.js",

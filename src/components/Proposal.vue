@@ -1,13 +1,24 @@
 <script setup lang="ts">
 interface Proposal {
-  title?: string;
+  title: string;
+  excerpt?: string;
 }
 
-withDefaults(defineProps<Proposal>(), {
-  title: 'A proposal'
+interface Props {
+  proposal: Proposal;
+}
+
+withDefaults(defineProps<Props>(), {
+  proposal: () => ({
+    title: 'A proposal',
+    excerpt: 'This is a very long text for a proposal demo.'
+  })
 });
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <div>
+    <div>{{ proposal.title }}</div>
+    <div>{{ proposal.excerpt }}</div>
+  </div>
 </template>

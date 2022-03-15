@@ -1,11 +1,17 @@
-import { defineComponent, openBlock, createElementBlock, toDisplayString } from "vue";
+import { defineComponent, openBlock, createElementBlock, createElementVNode, toDisplayString } from "vue";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   props: {
-    title: { default: "A proposal" }
+    proposal: { default: () => ({
+      title: "A proposal",
+      excerpt: "This is a very long text for a proposal demo."
+    }) }
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("h1", null, toDisplayString(__props.title), 1);
+      return openBlock(), createElementBlock("div", null, [
+        createElementVNode("div", null, toDisplayString(__props.proposal.title), 1),
+        createElementVNode("div", null, toDisplayString(__props.proposal.excerpt), 1)
+      ]);
     };
   }
 });
