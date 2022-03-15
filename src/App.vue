@@ -3,5 +3,5 @@ import Proposal from './components/Proposal.vue'
 </script>
 
 <template>
-  <Proposal />
+  <Proposal title="My proposal!" />
 </template>
