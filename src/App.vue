@@ -3,5 +3,10 @@ import Proposal from './components/Proposal.vue'
 </script>
 
 <template>
-  <Proposal title="My proposal!" />
+  <Proposal
+    :proposal="{
+      title: 'My Proposal!',
+      excerpt: 'This is the text excerpt from the proposal.'
+    }"
+  />
 </template>
