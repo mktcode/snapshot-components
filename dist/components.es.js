@@ -4,7 +4,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     proposal: { default: () => ({
       title: "A proposal",
       excerpt: "This is a very long text for a proposal demo."
-    }) }
+    }) },
+    allowVoting: { type: Boolean, default: true },
+    showResults: { type: Boolean, default: true }
   },
   setup(__props) {
     return (_ctx, _cache) => {
